@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Export-Package: org.webtide.demo.auction;uses:="javax.servlet,javax.se
+ rvlet.http,org.cometd.bayeux,org.cometd.bayeux.client,org.cometd.baye
+ ux.server,org.cometd.server,org.eclipse.jetty.util.ajax";version="2.8
+ .0",org.webtide.demo.auction.dao;uses:="org.webtide.demo.auction";ver
+ sion="2.8.0"
+Built-By: simon
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: CometD :: Demo
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: Dojo Foundation
+Bundle-ContactAddress: http://cometd.org/cometd-demo
+Build-Jdk: 1.7.0_51
+Bundle-Version: 2.8.0
+Bnd-LastModified: 1392119104390
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0, http://www
+ .opensource.org/licenses/bsd-license.html, http://opensource-definiti
+ on.org/licenses/afl-2.1.html
+Bundle-Description: The CometD project is a scalable web messaging bus
+  that uses WebSocketand HTTP AJAX push technology patterns known as "
+ Comet" techniques
+Bundle-SymbolicName: cometd-demo
+Bundle-DocURL: http://docs.cometd.org
+Import-Package: org.eclipse.jetty.util.ajax;version="[7.6,9)",javax.se
+ rvlet,javax.servlet.http,org.cometd.bayeux;version="[2.8,3)",org.come
+ td.bayeux.client;version="[2.8,3)",org.cometd.bayeux.server;version="
+ [2.8,3)",org.cometd.oort;version="[2.8,3)",org.cometd.server;version=
+ "[2.8,3)",org.cometd.server.authorizer;version="[2.8,3)",org.slf4j;ve
+ rsion="[1.7,2)"
+Archiver-Version: Plexus Archiver
+

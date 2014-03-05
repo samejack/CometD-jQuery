@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CometD jQuery Demo</title>
+    <script type="text/javascript" src="org/cometd.js"></script>
+    <script type="text/javascript" src="org/cometd/AckExtension.js"></script>
+    <script type="text/javascript" src="org/cometd/ReloadExtension.js"></script>
+    <script type="text/javascript" src="jquery/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="jquery/jquery.cometd.js"></script>
+    <script type="text/javascript" src="jquery/jquery.cometd-reload.js"></script>
+    <script type="text/javascript">
+        // cometd initialize
+        $.cometd.configure({
+            url: 'http://127.0.0.1:8080/cometd/cometd',
+            logLevel: 'debug'
+        });
+        
+        // handshake
+		$.cometd.handshake();
+		
+        $(document).ready(function () {
+            $('#subscribe-btn').click(function () {
+                // Subscribe Channel
+                $.cometd.subscribe($('#channel').val(), function(message){
+                    alert(message.data.msg);
+                });
+            });
+            
+            $('#publish-btn').click(function () {
+                // Publish Message
+                var message = {msg: $('#message').val()};
+                $.cometd.publish($('#channel').val(), message);
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" value="/chat/myroom" id="channel" />
+    <button id="subscribe-btn">Subscribe</button>
+    <input type="text" value="Helloworld!" id="message" />
+    <button id="publish-btn">Send</button>
+</body>
+</html>
